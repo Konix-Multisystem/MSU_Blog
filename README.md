@@ -1,2 +1,2 @@
 # MSU
-Small blog about theMSU devkit
+Small blog about the MSU devkit : http://savourysnax.github.io/MSU
