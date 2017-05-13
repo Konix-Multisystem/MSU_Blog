@@ -6,9 +6,9 @@ title: Bios, Uploader and Emulator
 
 I've spent some time disassembling and documenting the newly recovered BIOS. I've termed the 3 bios files as DEVSYS5 (from my board), MSUBIOS (the one I recieved when starting work on konix emulation) and EASY (which came from an TXC development directory). I believe the order of age from earliers to latest is DEVSYS5->MSUBIOS->EASY. From the disassembling, it appears MSUBIOS is a hacked variant of the DEVSYS5, designed to save time when developing for the board. EASY seems to rely on a number of additional components (NAND FLASH & MODEM), neither of which I have.
 
-The Slipstream emulator now shows the following (first shot is from the MSUBIOS, second is from DEVSYS5) :
+The Slipstream emulator now shows the following (first shot is from the MSUBIOS, second is from DEVSYS5), the colours may not be correct :
 
-![MSUBIOS](/MSU/images/BIOS-CP-1.png)
+![MSUBIOS](/MSU/images/Bios-CP-1.png)
 
 ![DEVSYS5](/MSU/images/BIOS-DevSys5.png)
 
