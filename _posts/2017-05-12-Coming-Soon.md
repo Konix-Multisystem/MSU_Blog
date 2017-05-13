@@ -1,7 +1,6 @@
 ---
 layout: post
 author: Savoury SnaX
-title: The Story So Far
+title: Coming Soon
 ---
 
-   This is a test
