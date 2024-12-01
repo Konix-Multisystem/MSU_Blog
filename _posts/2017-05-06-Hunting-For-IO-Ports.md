@@ -6,7 +6,7 @@ title: Hunting for IO ports
 
 Since I haven't been able to succesfully locate the IO ports from the host PC, I took to trying to figure it out from the hardware. Thankfully the ISA bus pinout is fairly simple, and after a bit of tracing, I narrowed down the important area of the board :
 
-![IO Area](/MSU/images/IO-Area.png)
+![IO Area](/MSU_Blog/images/IO-Area.png)
 
 Most of the above chips are latches, however the chip labelled U16 is the interesting one, this recieves A1/A4-A9/IORW/IORD/AEN and is almost certainly the address decode for the host IO port. Removing the label on the chip reveals it as a palce16v8h-15pc/4, which is an early form of programmable logic chip - this is unfortunate, as the documentation indicates we can't read back the program due to security fuses. An alternative approach that may work, is to electrically probe the pins looking for possible responses on one of the IO pins. The hope is, that if we can figure out the address that causes the chip to react, we will know the IO port for communicating from the host. I`ll have to try hooking it up to an Arduino and write a program to run through the combinations.
 
