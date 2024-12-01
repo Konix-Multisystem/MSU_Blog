@@ -8,7 +8,7 @@ This is going to be a large post, for what is essentially a small update :)
 
 I decided the simplest way to write and test the program to communicate with the devkit, was probably to use the Slipstream emulator and debugger along with an IBM PC emulator (Bochs). I quickly hacked up a modification to the gameport driver in bochs to make it read/write from a memory mapped page. I already use this method to share memory between the Slipstream emulator and a simple .NET debugger, so I simply extended the Slipstream emulator in the same way. This means that when the Bochs emulated PC reads/writes to the 0x200 port, the Slipstream emulator will see the changes. The below shot shows Bochs running Turbo Debugger (bottom right), Slipstream video out (top right), and the Slipstream Remote Debugger (left). The Bochs emulator has just set the 0x82 command onto the host PC game port, and slipstream is about to consume the data (See GPIO3 in the ASIC view, at the bottom, left is output, right is input (showing 0x0282)).
 
-![SlipAndBochs](/MSU/images/SlipAndBochs.png)
+![SlipAndBochs](/MSU_Blog/images/SlipAndBochs.png)
 
 The protocol for communicating with the devkit is pretty simple. For reading from the devkit to the host, the devkit waits for bit 9 of port GPIO3 to be set, and captures the low 8bits (the byte being transferred). The devkit then sets bit 10 to the port, and waits for the host to clear bit 9, the devkit then writes 0 to the port to indicate all done. Writing from the host to the devkit is basically the same but the host now manipulates bit 10, and the devkit manipulates bit 9. Below is a dump of my simple host pc program that will dump the entire contents of RAM from the devkit.
 
