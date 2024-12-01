@@ -8,9 +8,9 @@ I've spent some time disassembling and documenting the newly recovered BIOS. I'v
 
 The Slipstream emulator now shows the following (first shot is from the MSUBIOS, second is from DEVSYS5), the colours may not be correct :
 
-![MSUBIOS](/MSU/images/Bios-CP-1.png)
+![MSUBIOS](/MSU_Blog/images/Bios-CP-1.png)
 
-![DEVSYS5](/MSU/images/BIOS-DevSys5.png)
+![DEVSYS5](/MSU_Blog/images/BIOS-DevSys5.png)
 
 The MSUBIOS basically does the following :
 
