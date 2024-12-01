@@ -1,2 +1,2 @@
 # MSU
-Small blog about the MSU devkit : http://savourysnax.github.io/MSU
+[Small blog about the MSU devkit](https://konix-multisystem.github.io/MSU_Blog/)
